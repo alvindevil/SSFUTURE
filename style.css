@@ -6,47 +6,34 @@ body {
 }
 
 header {
-    background-color: #f89e9e;
-    color: #000000;
+    background-color: #333;
+    color: #fff;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.nav-menu
-{
-    display: flex;
-    column-gap: 50px;
-}
-.nav-menu .menu-icon img
-{
-    display: block;
-    width: 30px; height: 40px ;
-    position: absolute;
-    align-items: center;
-    left: 0;
-    
-}
-.nav-menu nav ul {
-    display: flex;
+
+nav ul {
     list-style: none;
+    display: flex;
 }
 
-.nav-menu nav ul li {
+nav ul li {
     margin: 0 15px;
 }
 
-.nav-menu nav ul li a {
-    color: #000000;
+nav ul li a {
+    color: #fff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.nav-menu nav ul li a:hover {
+nav ul li a:hover {
     color: #ff9900;
 }
 
-.nav-menu nav .dropdown {
+.dropdown {
     display: none;
     position: absolute;
     background-color: #fff;
@@ -54,10 +41,8 @@ header {
     z-index: 1;
 }
 
-.nav-menu nav ul li:hover .dropdown {
-    display: flex;
-    flex-direction: column;
-
+nav ul li:hover .dropdown {
+    display: block;
 }
 
 .cta-button {
@@ -73,37 +58,31 @@ header {
     background-color: #333;
 }
 
+/* Add styles for other sections as needed */
+
+
+
+/* Desktop Styles (styles.css) */
+/* ... (previous styles) ... */
 
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
     header {
-        flex-direction: row;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
     }
-    .nav-menu
-    {
-        display: flex;
-    }
-    .nav-menu .menu-icon
-    {
-        display: block;
-    }
-    nav{
-        display: none;
-        position: absolute;
-        right: 0;
-        top: 0;
-        padding-right: 200px;
-        background-color: white;
+
+    nav {
         margin-top: 10px;
     }
+
     nav ul {
         flex-direction: column;
         align-items: flex-start;
     }
 
     .dropdown {
-        position: absolute;
+        position: static;
         display: none;
         width: 100%;
         background-color: #fff;
@@ -115,23 +94,19 @@ header {
 
     .cta-button {
         margin-top: 10px;
-        cursor: pointer;
-    }
-    .nav-menu:hover nav
-    {
-        display: block;
     }
 }
 
 /* Tablet Styles (if needed) */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-    /*  tablet-specific styles  */
+    /* Add tablet-specific styles here */
 }
 
 /* Larger Desktop Styles (if needed) */
 @media screen and (min-width: 1025px) {
-    /*  larger desktop-specific styles */
+    /* Add larger desktop-specific styles here */
 }
+
 
 
 /* ... (previous styles) ... */
