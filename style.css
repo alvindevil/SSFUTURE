@@ -1,4 +1,11 @@
 /* Basic Styles */
+/* colour codes :
+  darkblue: 11029B 
+  darkblue:  77ACF0
+  darkblue:  3FDBF1
+  darkblue:  C1FDFD
+  */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -45,6 +52,55 @@ nav ul li:hover .dropdown {
     display: block;
 }
 
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+}
+.menu-toggle div
+{
+    background-color: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+}
+.menu-cross
+{
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    
+}
+.menu-cross div
+{
+    background-color: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+    
+}
+.menu-cross div:nth-child(1)
+{
+    display: block;
+    transform: translateX(-8px) rotateZ(45deg) scale(0.7);
+    width: 35px;
+    transition: all ease-in-out 0.3s;
+}
+.menu-cross div:nth-child(2)
+{
+    display: none;
+}
+.menu-cross div:nth-child(3)
+{
+    display: block;
+    transform: translate(-9px, -6px) rotateZ(-45deg) scale(0.7);
+    width: 35px;
+    transition: all ease-in-out 0.3s;
+}
+
+
 .cta-button {
     background-color: #ff9900;
     color: #fff;
@@ -68,17 +124,13 @@ nav ul li:hover .dropdown {
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
     header {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
-
-    nav {
-        margin-top: 10px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
+    .logo
+    {
+        margin-left: 40px;
     }
 
     .dropdown {
@@ -87,13 +139,38 @@ nav ul li:hover .dropdown {
         width: 100%;
         background-color: #fff;
     }
+    .menu-toggle {
+        display: block;
+        flex-direction: column;
+        cursor: pointer;
+        margin-right: 20px;
+        position: absolute;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        z-index: 1;
+        margin-top: 10px;
+    }
+    
+    nav.active {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
 
     nav ul li {
         margin: 10px 0;
-    }
-
-    .cta-button {
-        margin-top: 10px;
     }
 }
 
