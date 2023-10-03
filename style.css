@@ -213,6 +213,137 @@ nav ul li:hover .dropdown {
     margin-bottom: 30px;
 }
 
+.container 
+{
+    margin-top: 30px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    column-gap: 180px; row-gap: 40px;
+    flex-wrap: wrap;
+}
+.container .card
+{
+    position: relative;
+    width: 300px; height: 400px;
+    background:linear-gradient(180deg, rgba(5, 0, 255, 0.44) 0%, rgba(0, 56, 255, 0.44) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card header
+{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    color: black;
+    font: 800; font-size: 30px;
+}
+.card p
+{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin: 30px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    font: normal; font-weight: 100;
+    word-spacing: 10px;   
+}
+.card button
+{
+    display: flex;
+    justify-content: center; align-items: center;
+    position: absolute;
+    bottom: 40px;
+    background: linear-gradient(rgba(20, 20, 239, 0.419),rgba(5, 5, 203, 0.359));
+    color: white;
+    padding: 10px 15px;
+    border: solid 0px ;
+    border-radius: 4px;
+}
+.card button:hover
+{
+    background: linear-gradient(rgba(20, 20, 239, 0.852),rgba(5, 5, 203, 0.874));
+    color: white;
+}
+.container .card .imgbx,
+.container .card .txtbx
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}  
+.container .card .imgbx
+{
+    background: #4a29b9;
+    background:white;
+    height: 160px;
+    z-index: 1;
+    transform-origin: bottom ;
+}
+.container .card .imgbx img
+{
+    position: relative;
+    z-index: 2;
+    top: 35px;
+    width: 250px; height: 250px;
+}
+.container .card:hover .imgbx
+{
+    transform:  translateY(-100%) rotateX(90deg) ;
+}
+.container .card .txtbx
+{
+    align-items: flex-end;
+    height: 280px;
+    background: linear-gradient(180deg, rgb(97, 64, 231), rgb(57, 94, 228));
+    border-top: solid 8px #4a29b9;
+    transform-origin: top;
+}
+.container .card .txtbx h2
+{
+    position: absolute;
+    color: #ffffff;
+    font-size: 2rem;
+    bottom: 40px;
+}
+
+.container .card:hover .txtbx
+{
+    transform: translateY(100%) rotateX(90deg);
+}
+
+.container .card .imgbx::before
+{
+    content: ' ';
+    position: absolute;
+    background:#4a29b9;
+    background: white;
+    height: 210px; width: 210px;
+    bottom: -70px;
+    border-radius: 100px;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
     header {
