@@ -1,11 +1,16 @@
 /* Basic Styles */
 /* colour codes :
-  darkblue: 11029B 
-  darkblue:  77ACF0
-  darkblue:  3FDBF1
-  darkblue:  C1FDFD
+  darkblue: #11029B 
+  lightpurple:  #77ACF0
+  lightblue:  #3FDBF1
+  whiteblue:  #C1FDFD
   */
-
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -13,7 +18,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #11029B ;
     color: #fff;
     padding: 10px 20px;
     display: flex;
@@ -31,13 +36,13 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #ff9900;
+    color: #3FDBF1;
 }
 
 .dropdown {
@@ -46,7 +51,33 @@ nav ul li a:hover {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1;
+    padding: 10px;
+    padding-bottom: 20px;
+    height: fit-content; width: 280px;
 }
+.dropdown li
+{
+    margin: 30px;
+    background-color: #f5f5f5;
+    border: solid 0px ;
+    border-radius: 5px;
+    padding: 10px;
+}
+.dropdown li:hover
+{
+    margin: 30px;
+    background-color: #f5f5f5;
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 10px;
+}
+.dropdown li a
+{
+    color: black;
+    margin: 5px;
+    color-interpolation-filters: auto;
+}
+
 
 nav ul li:hover .dropdown {
     display: block;
@@ -75,7 +106,7 @@ nav ul li:hover .dropdown {
 }
 .menu-cross div
 {
-    background-color: #fff;
+    background-color: #d9f7fe;
     height: 3px;
     width: 25px;
     margin: 3px 0;
@@ -101,109 +132,60 @@ nav ul li:hover .dropdown {
 }
 
 
-.cta-button {
-    background-color: #ff9900;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
 
-.cta-button:hover {
-    background-color: #333;
-}
-
-/* Add styles for other sections as needed */
-
-
-
-/* Desktop Styles (styles.css) */
-/* ... (previous styles) ... */
-
-/* Mobile Styles */
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .logo
-    {
-        margin-left: 40px;
-    }
-
-    .dropdown {
-        position: static;
-        display: none;
-        width: 100%;
-        background-color: #fff;
-    }
-    .menu-toggle {
-        display: block;
-        flex-direction: column;
-        cursor: pointer;
-        margin-right: 20px;
-        position: absolute;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    nav {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background-color: #333;
-        z-index: 1;
-        margin-top: 10px;
-    }
-    
-    nav.active {
-        display: flex;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-}
-
-/* Tablet Styles (if needed) */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    /* Add tablet-specific styles here */
-}
-
-/* Larger Desktop Styles (if needed) */
-@media screen and (min-width: 1025px) {
-    /* Add larger desktop-specific styles here */
-}
-
-
-
-/* ... (previous styles) ... */
-
-/* Hero Section Styles */
 .hero {
-    background: url('hero-background.jpg') center/cover;
-    background-color: rgba(0, 0, 0, 0.5);
+    background: url('./ssf-images/improve\ your\ back\ office.webp') center/cover;
+    background-blend-mode: overlay;
+    background-color: rgba(88, 148, 161, 0.337);
     color: #fff;
     text-align: center;
-    padding: 150px 0;
+    padding: 200px 0;
 }
-
+.hero .hero-content
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto ;
+}
 .hero h1 {
     font-size: 36px;
     margin-bottom: 20px;
 }
 
 .buttons {
-    margin-top: 40px;
+    display: flex;
+    margin: auto;
+    column-gap: 100px;
+    margin-top: 100px;
+}
+.buttons a
+{
+    text-decoration: none;
+}
+.buttons a:nth-child(2)
+{
+    border: 1px solid #41E3E5;
+    background: linear-gradient(180deg, rgba(50, 187, 189, 0.00) 0%, rgba(41, 167, 169, 0.00) 100%);
+}
+.buttons a:nth-child(2):hover
+{
+    border: 1px solid #41E3E5;
+    background: linear-gradient(180deg, rgba(50, 187, 189, 40) 0%, rgba(41, 167, 169, 50) 100%);
+}
+.cta-button {
+    background: linear-gradient(180deg, #3FDBF1 0%, #2F9FAF 100%);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.cta-button:hover 
+{
+    background: linear-gradient(180deg, #0233d5 0%, #003bc6 100%);
+    color: white;
+
 }
 
 /* Services Section Styles */
@@ -231,3 +213,66 @@ nav ul li:hover .dropdown {
     margin-bottom: 30px;
 }
 
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo
+    {
+        margin-left: 40px;
+    }
+
+    .dropdown {
+        position: absolute;
+        display: none;
+        width: 300px;
+        padding: 0px 10px 0px 10px;
+        background-color: #C1FDFD;
+    }
+    .menu-toggle {
+        display: block;
+        flex-direction: column;
+        cursor: pointer;
+        margin-right: 20px;
+        position: absolute;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #C1FDFD;
+        z-index: 1;
+        margin-top: 10px;
+    }
+    
+    nav.active {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Tablet Styles */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Add tablet-specific styles here */
+}
+
+/* Larger Desktop Styles */
+@media screen and (min-width: 1025px) {
+    /* Add larger desktop-specific styles here */
+}
