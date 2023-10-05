@@ -200,32 +200,37 @@ nav ul li:hover .dropdown {
 {
     display: flex;
     flex-direction: row;
-    margin: auto;
-    margin-top: 50px;
-    width: 1400px; height: fit-content; 
-    padding: 50px 0px;
-    background-color: 77ACF0;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100vw; height: fit-content; 
+    padding:  20px 100px;
     column-gap: 20px;
     border: solid 1px grey;
-    padding: 100px;
     box-sizing: content-box;
     background-color:  #77ACF0;
 }
+.trusted-by h2
+{
+    font-size: 30px;
+}
 .trusted-by:hover
 {
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
 }
 .trusted-by .img-flow
 {
     display: flex;
-    margin-left: 300px;
     column-gap: 50px;
     flex-wrap: nowrap;
-    max-width: 800px;
+    max-width: 900px;
     overflow-y: hidden;
     overflow-x: scroll;
-    border: solid 1px grey;
-    padding: 20px 20px;
+    padding: 0px 20px;
+    height: fit-content;
+    border-left: solid 1px white;
+    padding-left: 200px;
+    box-sizing: content-box;
+
     /* animation: scroll 6s linear infinite; */
 }
 .trusted-by .img-flow::-webkit-scrollbar
@@ -307,6 +312,10 @@ nav ul li:hover .dropdown {
     column-gap: 120px; row-gap: 80px;
     flex-wrap: wrap;
     max-width: 1200px;
+/*     background: linear-gradient(180deg, #3fdcf16d 0%, #77abf04a 100%); */
+    
+    box-sizing: content-box;
+    padding: 0px 100px;
 }
 .container .card
 {
@@ -333,21 +342,19 @@ nav ul li:hover .dropdown {
 }
 .card p
 {
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
+    display: flex;  
+    text-align:justify;
     margin: 30px;
+    top: 70px;
     color: rgb(255, 255, 255);
-    position: absolute;
-    font: normal; font-weight: 100;
-    word-spacing: 10px;   
+    position: absolute; 
 }
 .card button
 {
     display: flex;
     justify-content: center; align-items: center;
     position: absolute;
-    bottom: 40px;
+    bottom: 20px;
     background: linear-gradient(rgba(20, 20, 239, 0.419),rgba(5, 5, 203, 0.359));
     color: white;
     padding: 10px 15px;
@@ -373,7 +380,7 @@ nav ul li:hover .dropdown {
 {
     background: #4a29b9;
     background:white;
-    height: 160px;
+    height: 140px;
     z-index: 1;
     transform-origin: bottom ;
 }
@@ -382,7 +389,7 @@ nav ul li:hover .dropdown {
     position: relative;
     z-index: 2;
     top: 35px;
-    width: 250px; height: 250px;
+    width: 140px; height: 140px;
 }
 .container .card:hover .imgbx
 {
@@ -422,7 +429,85 @@ nav ul li:hover .dropdown {
     z-index: 1;
 }
 
+.key-features
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    padding: 100px;
+}
+.key-features div
+{
+    
+}
 
+.choose
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    flex-direction: column; 
+    row-gap: 80px;
+    margin-top: 50px;
+    border-radius: 0px 0px 0px 0px;
+    background: linear-gradient(#77ACF0,#77abf079);
+    padding: 10px;
+}
+.choose h1
+{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 50px;
+}
+.choose .slider
+{
+    display: flex;
+    max-width: 80vw;
+    column-gap: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+}
+.choose .slider::-webkit-scrollbar
+{
+    display: none;
+}
+.slider .slider-box
+{
+    display: flex;
+    min-width: 72vw;
+    border: solid 1px grey;
+    padding: 50px;
+    box-sizing: content-box;
+}
+
+.slider .slider-box div
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.slider .slider-box div h3
+{
+    text-align: center;
+    font-size: 30px;
+}
+.slider .slider-box div h3::after
+{
+    content: '_____________';
+    display: block;
+    margin: auto;
+    margin-top: -20px;
+}
+.slider .slider-box div p
+{
+    display: block;
+    text-align: justify;
+    font-size: 20px;
+    padding: 50px;
+}
 
 
 
@@ -482,6 +567,26 @@ nav ul li:hover .dropdown {
 
     nav ul li {
         margin: 10px 0;
+    }
+
+    .trusted-by
+    {
+        width: fit-content;
+    }
+    .trusted-by h2
+    {
+        font-size: 20px;
+        width: fit-content;
+        padding: 5px;
+    }
+    .trusted-by .img-flow
+    {
+        width: fit-content;
+        border-left: solid white 1px ;
+    }
+    .trusted-by .img-flow img
+    {
+        width: 60px;
     }
 }
 
