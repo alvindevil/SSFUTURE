@@ -285,7 +285,7 @@ nav ul li:hover .dropdown {
 }
 
 .services h2 {
-    font-size: 32px;
+    font-size: 42px;
     margin-bottom: 30px;
 }
 
@@ -366,6 +366,7 @@ nav ul li:hover .dropdown {
     background: linear-gradient(rgba(20, 20, 239, 0.852),rgba(5, 5, 203, 0.874));
     color: white;
 }
+
 .container .card .imgbx,
 .container .card .txtbx
 {
@@ -376,10 +377,11 @@ nav ul li:hover .dropdown {
     align-items: center;
     transition: 0.5s;
 }  
+
 .container .card .imgbx
 {
     background: #4a29b9;
-    background:white;
+    background: linear-gradient(180deg, #3FDBF1 0%, #3FDBF1 100%);
     height: 140px;
     z-index: 1;
     transform-origin: bottom ;
@@ -389,7 +391,9 @@ nav ul li:hover .dropdown {
     position: relative;
     z-index: 2;
     top: 35px;
-    width: 140px; height: 140px;
+    width: 190px; height: 190px;
+    background-color: #3FDBF1;
+    border-radius: 100px;
 }
 .container .card:hover .imgbx
 {
@@ -417,17 +421,17 @@ nav ul li:hover .dropdown {
     transform: translateY(100%) rotateX(90deg);
 }
 
-.container .card .imgbx::before
+/* .container .card .imgbx::before
 {
     content: ' ';
     position: absolute;
     background:#4a29b9;
-    background: white;
+    background: linear-gradient(180deg, #3ed3e7 0%, #3ac9dc 100%);
     height: 210px; width: 210px;
     bottom: -70px;
     border-radius: 100px;
     z-index: 1;
-}
+} */
 
 .key-features
 {
@@ -437,12 +441,56 @@ nav ul li:hover .dropdown {
     align-items: flex-start;
     text-align: left;
     padding: 100px;
+    background: linear-gradient(#4a6f9a, #42658b);
+    background: linear-gradient(180deg, #3FDBF1 0%, #77ACF0 100%);
 }
 .key-features div
 {
-    
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    margin-left: 100px;
 }
-
+.key-features div h1
+{
+    display: block;
+    text-align: left;
+    font-size: 45px;
+    max-width: 650px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #fbffff;
+    color: black;
+}
+.key-features div p
+{
+    font-size: 20px;
+    width: 78vw;
+    margin: auto;
+    word-spacing: 0px;
+    line-height: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:  rgb(190, 217, 222);
+    color: black;
+}
+.key-features div ul
+{
+    display: block;
+    padding: 0px 0px 0px 10px ;
+}
+.key-features div ul li
+{
+    color: rgb(190, 217, 222);
+    color: rgb(15, 35, 97);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;    
+}
+.types
+{
+    display: flex;
+    width: 100vw;
+    height: 500px;
+    background-color: grey;
+}
 .choose
 {
     display: flex;
