@@ -384,6 +384,7 @@ nav ul li:hover .dropdown {
     background: linear-gradient(180deg, #3FDBF1 0%, #3FDBF1 100%);
     height: 140px;
     z-index: 1;
+    
     transform-origin: bottom ;
 }
 .container .card .imgbx img
@@ -432,6 +433,57 @@ nav ul li:hover .dropdown {
     border-radius: 100px;
     z-index: 1;
 } */
+
+.types
+{
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    max-height: 800px; padding: 50px 100px;
+    margin: auto;
+    background-color: #35476798;
+}
+.types img
+{
+    display: block;
+    width: 400px;
+}
+.types .apps-types
+{
+    display: flex;
+    column-gap: 50px;
+    border: solid 1px red;
+    max-height: 500px;
+}
+.apps-types div 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.apps-types div ul
+{
+    padding: 40px;
+}
+.apps-types div ul li
+{
+    margin: 40px;
+    list-style: none;
+    font-size: 30px;
+    color: #000a22;
+    cursor: pointer;
+    padding: 11.5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.apps-types div ul li:hover
+{
+    border: solid 1px rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 1px rgba(235, 235, 235, 0.57);
+    padding: 10px;
+    
+}
+
+
 
 .key-features
 {
@@ -484,13 +536,7 @@ nav ul li:hover .dropdown {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 18px;    
 }
-.types
-{
-    display: flex;
-    width: 100vw;
-    height: 500px;
-    background-color: grey;
-}
+
 .choose
 {
     display: flex;
@@ -557,6 +603,25 @@ nav ul li:hover .dropdown {
     padding: 50px;
 }
 
+.portfolio
+{
+    display: flex;
+    flex-direction: column;
+    height: 500px; width: 100%;
+    background-color: grey;
+    justify-content: space-between;
+    align-items: center;
+}
+.portfolio img
+{
+    width: 500px;
+}
+.portfolio div
+{
+    display: flex;
+    height: 500px;
+    background-color: blueviolet;
+}
 
 
 

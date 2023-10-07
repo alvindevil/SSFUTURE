@@ -3,11 +3,14 @@ const nav = document.getElementById("nav");
 
 menu_toggle.addEventListener('click', ()=>
 {
-    if(nav.classList.contains('active')){
+    if(nav.classList.contains('active'))
+    {
         nav.classList.remove('active');
         menu_toggle.classList.remove('menu-cross');
     }
-    else{
+
+    else
+    {
         nav.classList.add('active');
         menu_toggle.classList.add('menu-cross');
     }
