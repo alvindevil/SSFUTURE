@@ -483,58 +483,49 @@ nav ul li:hover .dropdown {
     
 } */
 
+
 /* ANDROID DEV SERVICES STYLE SECTION  */
-.android-services {
-    background-color: #5c82a6;
+.android-development-services {
+    background-color: #ffffff;
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.tab-buttons {
-    margin-bottom: 20px;
-}
-
-.tab-button {
-    background-color: #152573;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-right: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.tab-button:hover {
-    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.268);
+    margin: 50px 0px 50px 0px;
 }
 
 .app-carousel {
+    max-width: 90vw;
+    margin: auto;
     display: flex;
-    overflow-x: scroll;
+    overflow-x: auto;
     margin-bottom: 20px;
     padding-bottom: 20px;
 }
 
-.app-slide {
-    display: flex;
+.app-carousel div{
+    background-color: #3887b577;
+    padding: 5px;
     flex: 0 0 300px;
     margin-right: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
+    color: rgb(7, 3, 44);
 }
 
-.app-slide img {
+.app-carousel div img {
     width: 100%;
     height: auto;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
-.app-slide:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.app-carousel div:hover {
+    box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
+
+
+
+
 
 /* WEB DEV SERVICES STYLE SECTION  */
 .web-development-services {
@@ -802,6 +793,11 @@ nav ul li:hover .dropdown {
     {
         width: 60px;
     }
+
+    .app-slide {
+        flex: 0 0 calc(50% - 20px);
+    }
+    
 }
 
 /* Tablet Styles */
