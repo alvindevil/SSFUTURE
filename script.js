@@ -16,25 +16,9 @@ menu_toggle.addEventListener('click', ()=>
     }
 })
 
-function showAppCategory(category) {
-    var slides = document.querySelectorAll('.app-slide');
-    slides.forEach(function(slide) {
-        slide.style.display = 'none';
-    });
 
-    var activeSlides = document.querySelectorAll('.' + category);
-    activeSlides.forEach(function(slide) {
-        slide.style.display = 'block';
-    });
 
-    var buttons = document.querySelectorAll('.tab-button');
-    buttons.forEach(function(button) {
-        button.classList.remove('active');
-    });
 
-    var activeButton = document.querySelector('.' + category + '-button');
-    activeButton.classList.add('active');
-}
 
 document.addEventListener('DOMContentLoaded', function() {
     var slideIndex = 0;
