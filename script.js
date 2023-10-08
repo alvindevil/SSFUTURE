@@ -36,3 +36,23 @@ function showAppCategory(category) {
     activeButton.classList.add('active');
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    var slideIndex = 0;
+    var totalSlides = document.querySelectorAll('.slide').length;
+    var slideWidth = document.querySelector('.slide').offsetWidth;
+
+    document.querySelector('.next-slide').addEventListener('click', function() {
+        slideIndex = (slideIndex + 1) % totalSlides;
+        updateSlider();
+    });
+
+    document.querySelector('.prev-slide').addEventListener('click', function() {
+        slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
+        updateSlider();
+    });
+
+    function updateSlider() {
+        var newPosition = -slideIndex * slideWidth;
+        document.querySelector('.slider-container').style.transform = 'translateX(' + newPosition + 'px)';
+    }
+});
