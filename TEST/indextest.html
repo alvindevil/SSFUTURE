@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+.web-development-services {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    flex: 0 0 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.prev-slide,
+.next-slide {
+    background-color: #ff9900;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+
+</style>
+</head>
+<body>
+    <div class="web-development-services">
+        <div class="slider-container">
+            <div class="slide">
+                <img src="website1.jpg" alt="Website 1">
+                <h3>Corporate Websites</h3>
+                <p>Professional websites representing businesses, showcasing products/services, company information, and client testimonials.</p>
+            </div>
+            <div class="slide">
+                <img src="website2.jpg" alt="Website 2">
+                <h3>E-commerce Websites</h3>
+                <p>Online stores with intuitive navigation, secure transactions, product categorization, and detailed product pages to boost sales.</p>
+            </div>
+            <!-- Add more slides for other types of websites -->
+        </div>
+        <div class="slider-controls">
+            <button class="prev-slide">&lt;</button>
+            <button class="next-slide">&gt;</button>
+        </div>
+    </div>
+    
+    
+<script >
+    document.addEventListener('DOMContentLoaded', function() {
+    var slideIndex = 0;
+    var totalSlides = document.querySelectorAll('.slide').length;
+    var slideWidth = document.querySelector('.slide').offsetWidth;
+
+    document.querySelector('.next-slide').addEventListener('click', function() {
+        slideIndex = (slideIndex + 1) % totalSlides;
+        updateSlider();
+    });
+
+    document.querySelector('.prev-slide').addEventListener('click', function() {
+        slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
+        updateSlider();
+    });
+
+    function updateSlider() {
+        var newPosition = -slideIndex * slideWidth;
+        document.querySelector('.slider-container').style.transform = 'translateX(' + newPosition + 'px)';
+    }
+});
+
+</script>
+</body>
+</html>
