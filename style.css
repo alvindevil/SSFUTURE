@@ -434,7 +434,7 @@ nav ul li:hover .dropdown {
     z-index: 1;
 } */
 
-.types
+/* .types
 {
     display: flex;
     flex-direction: column;
@@ -481,7 +481,59 @@ nav ul li:hover .dropdown {
     box-shadow: 0px 0px 10px 1px rgba(235, 235, 235, 0.57);
     padding: 10px;
     
+} */
+
+.android-services {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.tab-buttons {
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background-color: #ff9900;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.tab-button:hover {
+    background-color: #333;
+}
+
+.app-carousel {
+    display: flex;
+    overflow-x: scroll;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.app-slide {
+    flex: 0 0 300px;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.app-slide img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.app-slide:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
 
 
 
@@ -606,21 +658,26 @@ nav ul li:hover .dropdown {
 .portfolio
 {
     display: flex;
-    flex-direction: column;
     height: 500px; width: 100%;
-    background-color: grey;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    padding: 100px;
 }
 .portfolio img
 {
-    width: 500px;
+    width: 400px;
 }
 .portfolio div
 {
+    width: 600px;
     display: flex;
-    height: 500px;
-    background-color: blueviolet;
+    flex-direction: column;
+    row-gap: 30px;
+}
+.portfolio div p
+{
+    width: 500px;
+    font-size: 20px;
 }
 
 
