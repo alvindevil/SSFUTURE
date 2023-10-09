@@ -486,36 +486,86 @@ nav ul li:hover .dropdown {
 
 /* ANDROID DEV SERVICES STYLE SECTION  */
 .android-development-services {
-    background-color: #ffffff;
-    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0px 80px 0px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.268);
     margin: 50px 0px 50px 0px;
+    width: 100vw;
+    background:  linear-gradient(#77ACF0, #253f62);
 }
 
 .app-carousel {
     max-width: 90vw;
-    margin: auto;
     display: flex;
+    flex-wrap: nowrap;
     overflow-x: auto;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
+    margin: auto;
+    justify-content: space-between;
+}
+.app-carousel::-webkit-scrollbar
+{
+    display: none;
 }
 
 .app-carousel div{
-    background-color: #3887b577;
-    padding: 5px;
-    flex: 0 0 300px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    max-width:fit-content;
     margin-right: 20px;
     transition: box-shadow 0.3s ease;
     color: rgb(7, 3, 44);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-style: preserve-3d;
+    perspective: 200px;
+    cursor: pointer;
+}
+.app-carousel div:hover
+{
+    box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.5);
+}
+.app-carousel div:hover img
+{
+    transform: translateZ(5px);
+    transition: all ease-in-out 0.5s;
+}
+.app-carousel div:hover p
+{
+    color:#000514;
+    transition: all ease-in-out 0.3s;
+    transform: translate3d(0px,-5px,5px);
 }
 
 .app-carousel div img {
-    width: 100%;
-    height: auto;
+    width: 300px;
+    height: 200px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    padding: 10px;
+}
+.app-carousel div h3
+{
+    display: block;
+    width: fit-content;
+    font-size: 20px;
+    margin: auto;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.app-carousel div p
+{
+    display: block;
+    width: 300px;
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+    font-size: 14px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    perspective: 100px;
 }
 
 .app-carousel div:hover {
@@ -553,6 +603,7 @@ nav ul li:hover .dropdown {
     height: auto;
     border-radius: 10px;
     margin-bottom: 20px;
+    width: 400px;
 }
 
 .slider-controls {
