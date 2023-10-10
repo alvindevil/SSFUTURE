@@ -40,3 +40,14 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.slider-container').style.transform = 'translateX(' + newPosition + 'px)';
     }
 });
+
+function showSlider(type) {
+    var slides = document.querySelectorAll('.slide');
+    slides.forEach(function(slide) {
+        slide.style.display = 'none';
+    });
+
+    // Show the selected type of website slide
+    var selectedSlide = document.querySelector('.' + type);
+    selectedSlide.style.display = 'flex';
+}
