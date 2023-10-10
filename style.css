@@ -579,7 +579,78 @@ nav ul li:hover .dropdown {
 
 
 /* WEB DEV SERVICES STYLE SECTION  */
-.web-development-services {
+
+.tabular-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tabs {
+    display: flex;
+    color: #000000;
+    margin: auto;
+    padding: 20px;
+    column-gap: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    background: linear-gradient(rgb(59, 77, 158),rgb(126, 144, 220));
+    border-radius: 6px;
+}
+
+.slider {
+    display: flex;
+    max-width: 900px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    background-color: grey;
+}
+
+.slide {
+    width: 100%;
+}
+.slide img
+{
+    width: 900px;
+    height: 500px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .tabs {
+        flex-direction: row;
+        width: 100%;
+        overflow-x: auto;
+    }
+    .tab {
+        margin-right: 10px;
+    }
+}
+
+/* Styles for each type of website */
+.ecommerce { 
+    display: flex;
+    margin: auto;
+    min-width: 900px;
+    overflow: auto;
+}
+.corporate { 
+    display: flex;
+    margin: auto;
+    min-width: 900px;
+    overflow: auto;
+}
+.business { /* Add styles for Business Website Slide */}
+.portfolio { /* Add styles for Portfolio Website Slide */}
+.blogging { /* Add styles for Blogging Website Slide */}
+
+
+
+
+/* .web-development-services {
     background-color: #ffffff;
     padding: 40px;
     border-radius: 10px;
@@ -637,7 +708,7 @@ nav ul li:hover .dropdown {
     border-radius: 50%;
     padding: 10px 15px;
     cursor: pointer;
-}
+} */
 
 /* KEY FEATURES STYLE SECTION HERE */
 .key-features
@@ -850,6 +921,8 @@ textarea {
 button:hover {
     background-color: #333;
 }
+
+
 
 
 
