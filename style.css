@@ -634,6 +634,7 @@ nav ul li:hover .dropdown {
 }
 
 .slide {
+    display: none;
     width: 100%;
     transition: all 1s ease-in-out ;
 }

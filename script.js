@@ -48,6 +48,6 @@ function showSlider(type) {
     });
 
     // Show the selected type of website slide
-    var selectedSlide = document.querySelector('.' + type);
+    var selectedSlide = document.querySelector('.' + type );
     selectedSlide.style.display = 'flex';
 }
