@@ -16,6 +16,10 @@ body {
     margin: 0;
     padding: 0;
 }
+body::-webkit-scrollbar
+{
+    display: none;
+}
 
 header {
     background-color: #11029B ;
@@ -483,7 +487,6 @@ nav ul li:hover .dropdown {
     
 } */
 
-
 /* ANDROID DEV SERVICES STYLE SECTION  */
 .android-development-services {
     display: flex;
@@ -493,7 +496,7 @@ nav ul li:hover .dropdown {
     border-radius: 0px 0px 0px 100px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.268);
     margin: 50px 0px 50px 0px;
-    width: 99vw;
+    width: 100vw;
     margin: auto;
     background:  linear-gradient(#77ACF0, #253f62);
 }
@@ -582,40 +585,72 @@ nav ul li:hover .dropdown {
 
 .tabular-section {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 0;
 }
 
 .tabs {
     display: flex;
+    position: absolute;
+    flex-direction: column;
     color: #000000;
-    margin: auto;
-    padding: 20px;
-    column-gap: 20px;
+    padding: 0px;
+    row-gap: 20px;
+    left: 0px;
+    margin-top: 200px;
 }
 
 .tab {
     padding: 10px 20px;
+    width: 200px;
     cursor: pointer;
     background: linear-gradient(rgb(59, 77, 158),rgb(126, 144, 220));
-    border-radius: 6px;
+}
+.tab:nth-child(2){
+    width: 220px;
+}
+.tab:nth-child(3){
+    width: 240px;
+}
+.tab:nth-child(4){
+    width: 260px;
+}
+.tab:nth-child(5){
+    width: 280px;
 }
 
 .slider {
     display: flex;
-    max-width: 900px;
-    flex-wrap: nowrap;
+    max-width: 800px;
     overflow: hidden;
-    background-color: grey;
+    margin-left: 100px;
+    padding-top: 100px;
+}
+.slide::-webkit-scrollbar
+{
+    display: none;
 }
 
 .slide {
     width: 100%;
+    transition: all 1s ease-in-out ;
 }
 .slide img
 {
-    width: 900px;
+    min-width: 800px;
     height: 500px;
+    animation: scrollby 12s  infinite;
+    transition: all ease-in-out ;
+}
+@keyframes scrollby
+{
+    0%{}
+    25%{transform: translateX(-800px);}
+    50%{transform: translateX(-1600px);}
+    75%{transform: translateX(-2400px);}
+    100%{}
 }
 
 /* Responsive Styles */
@@ -631,21 +666,32 @@ nav ul li:hover .dropdown {
 }
 
 /* Styles for each type of website */
-.ecommerce { 
+.ecommerce{ 
     display: flex;
     margin: auto;
-    min-width: 900px;
+    min-width: 800px;
     overflow: auto;
 }
-.corporate { 
+.corporate{ 
     display: flex;
     margin: auto;
-    min-width: 900px;
+    min-width: 800px;
     overflow: auto;
 }
-.business { /* Add styles for Business Website Slide */}
-.portfolio { /* Add styles for Portfolio Website Slide */}
-.blogging { /* Add styles for Blogging Website Slide */}
+.business{ 
+    display: flex;
+    margin: auto;
+    min-width: 800px;
+    overflow: auto;
+}
+.portfolio
+{
+    display: flex;
+    margin: auto;
+    min-width: 800px;
+    overflow: auto;
+}
+
 
 
 
@@ -830,31 +876,47 @@ nav ul li:hover .dropdown {
     padding: 50px;
 }
 
+/* PORTFOLIO STYLES  */
 .portfolio
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.portfolio h1
+{
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding:0px 100px;
+    margin-top: 50px;
+}
+.projects
 {
     display: flex;
     height: 500px; width: 100%;
     justify-content: space-around;
     align-items: center;
-    padding: 100px;
+    padding: 0px 100px;
 }
-.portfolio img
+
+.projects img
 {
     width: 400px;
 }
-.portfolio div
+.projects div
 {
     width: 600px;
     display: flex;
     flex-direction: column;
     row-gap: 30px;
 }
-.portfolio div p
+.projects div p
 {
     width: 500px;
     font-size: 20px;
 }
-.portfolio div button
+.projects div button
 {
     display: block;
     padding: 10px;
@@ -862,31 +924,45 @@ nav ul li:hover .dropdown {
     border: solid 0px black;
     border-radius: 5px;
     margin-left: 20rem;
-    background: linear-gradient(rgba(79, 79, 188, 0.701), rgba(63, 128, 185, 0.696));
+    background:linear-gradient(rgba(79, 79, 188, 0.701), rgba(63, 128, 185, 0.696));
+    cursor: pointer;
 }
-.portfolio div button:hover
+.projects div button:hover
 {
     background-color: #000335;
     color: white;
 }
 
 .contact-section {
-    background-color: #f9f9f9;
-    padding: 80px 0;
+    background: url(./ssf-images/contact-us-image-click.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -100px;
+    background-blend-mode:overlay;
+    background-color: #ffffffbd;
+    padding: 200px 0;
 }
 
 .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
+    width: 100%;
+    margin: 0 auto;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.contact-info,
+.contact-info
+{
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.804);
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
 .get-in-touch {
-    flex: 0 0 48%;
+    display: flex;
+    width: 300px;
+    flex-direction: column;
     padding: 20px;
     background-color: white;
     border-radius: 10px;
@@ -908,7 +984,7 @@ textarea {
 }
 
 .get-in-touch form button {
-    background-color: #ff9900;
+    background-color: #31167b;
     color: #fff;
     border: none;
     border-radius: 5px;
