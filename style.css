@@ -324,7 +324,7 @@ nav ul li:hover .dropdown {
 .container .card
 {
     position: relative;
-    width: 300px; height: 380px;
+    width: 320px; height: 380px;
     background:linear-gradient(180deg, rgba(5, 0, 255, 0.44) 0%, rgba(0, 56, 255, 0.44) 100%);
     color: rgb(0, 0, 0);
     display: flex;
@@ -336,13 +336,12 @@ nav ul li:hover .dropdown {
 {
     display: flex;
     justify-content: center;
-    align-self: center;
-    align-items: center;
     text-align: center;
     position: absolute;
     top: 0px;
     color: rgb(255, 255, 255);
     font: 800; font-size: 30px;
+    width: 100%;
 }
 .card p
 {
@@ -396,9 +395,10 @@ nav ul li:hover .dropdown {
     position: relative;
     z-index: 2;
     top: 35px;
-    width: 190px; height: 190px;
+    width: 150px; height: 150px;
     background-color: #3FDBF1;
     border-radius: 100px;
+    transform: translateY(-50px);
 }
 .container .card:hover .imgbx
 {
@@ -406,9 +406,10 @@ nav ul li:hover .dropdown {
 }
 .container .card .txtbx
 {
-    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
     height: 280px;
-    /* background: linear-gradient(180deg, #866CC9 12.5%, #3497F3 47.92%, #5CCCEF 100%); */
+    align-items: flex-start;
     background: linear-gradient(180deg, #3FDBF1 0%, #77ACF0 100%);
     border-top: solid 8px #3FDBF1;
     transform-origin: top;
@@ -419,8 +420,15 @@ nav ul li:hover .dropdown {
     color: #ffffff;
     font-size: 2rem;
     bottom: 40px;
+    transform: translateY(-100px);
 }
-
+.container .card .txtbx p
+{
+    display: block;
+    padding: 10px;
+    transform: translateY(-40px);
+    text-align: center;
+}
 .container .card:hover .txtbx
 {
     transform: translateY(100%) rotateX(90deg);
@@ -810,71 +818,95 @@ nav ul li:hover .dropdown {
     font-size: 18px;    
 }
 
+
+/* WHY CHOOSE US SECTION STYLES  */
 .choose
 {
     display: flex;
     justify-content: center;
     align-items: center;  
     flex-direction: column; 
-    row-gap: 80px;
+    row-gap: 20px;
     margin-top: 50px;
     border-radius: 0px 0px 0px 0px;
-    background: linear-gradient(#77ACF0,#77abf079);
-    padding: 10px;
+    background: linear-gradient(#456da2,#0b213c79);
+    padding: 50px 0px;
     border-radius: 0px 100px 0px 0px ;
 }
 .choose h1
 {
-    font-size: 40px;
+    font-size: 45px;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 10px;
+    color: #ffffff;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
 }
-.choose .slider
+.choose .slider2
 {
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
     max-width: 80vw;
     column-gap: 20px;
     overflow-x: scroll;
     overflow-y: hidden;
     flex-wrap: nowrap;
+    transform-style: preserve-3d;
+    background-color: rgba(181, 193, 220, 0.096);
+    box-shadow: 0px 0px 20px 0px  rgb(44, 42, 42);
+    
 }
-.choose .slider::-webkit-scrollbar
+.slider2::-webkit-scrollbar
 {
     display: none;
 }
-.slider .slider-box
+.slider2 .slider-box
 {
     display: flex;
-    min-width: 72vw;
-    border: solid 1px grey;
-    padding: 50px;
+    min-width: 75vw;
+    padding: 20px;
     box-sizing: content-box;
 }
 
-.slider .slider-box div
+.slider2 .slider-box div
 {
     display: flex;
     flex-direction: column;
 }
 
-.slider .slider-box div h3
+.slider2 .slider-box div h3
 {
     text-align: center;
     font-size: 30px;
+    color: rgb(0, 0, 111);
+    cursor: pointer;
 }
-.slider .slider-box div h3::after
+.slider2 .slider-box div h3::after
 {
     content: '_____________';
+    color: #070433;
     display: block;
     margin: auto;
     margin-top: -20px;
+    transition: all ease-in-out 0.2;
 }
-.slider .slider-box div p
+.slider2 .slider-box div h3:hover::after
+{
+    content: '_____________';
+    display: block;
+    color: #140b93;
+    margin: auto;
+    margin-top: -20px;
+}
+.slider2 .slider-box div p
 {
     display: block;
     text-align: justify;
     font-size: 20px;
     padding: 50px;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* PORTFOLIO STYLES  */
